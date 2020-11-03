@@ -1,0 +1,107 @@
+#Uploaded by Sudeera Seneviratne#
+
+vtp mode server 
+vtp domain mediamora
+vtp password class
+vlan 10
+name Reception
+vlan 20
+name Administration
+vlan 30
+name HR
+vlan 40
+name Legal
+vlan 50
+name Finance&management
+vlan 60
+name IT
+vlan 70
+name Graphicdesigning
+vlan 80
+name Advertising
+vlan 90
+name WLAN
+vlan 150
+name Datacenter
+exit
+ip routing
+interface vlan 10
+description RECEPTION
+ip address 192.168.1.2 255.255.255.0
+standby 1 ip 192.168.1.1
+standby 1 priority 150
+standby 1 preempt
+no shutdown
+exit
+interface vlan 20
+description ADMINISTRATION DEPARTMENT
+ip address 192.168.2.2 255.255.255.0
+standby 2 ip 192.168.2.1
+standby 2 priority 150
+standby 2 preempt
+no shutdown 
+exit
+interface vlan 30
+description HUMAN RESOURCE MANAGMENT
+ip address 192.168.3.2 255.255.255.0
+standby 3 ip 192.168.3.1
+standby 3 priority 150
+standby 3 preempt
+no shutdown 
+exit
+interface vlan 40
+description LEGAL DEPARTMENT
+ip address 192.168.4.2 255.255.255.0
+standby 4 ip 192.168.4.1
+standby 4 priority 150
+standby 4 preempt
+no shutdown 
+exit
+interface vlan 50
+description FINANCE AND MANAGMENT DEPARTMENT
+ip address 192.168.5.2 255.255.255.0
+standby 5 ip 192.168.5.1
+standby 5 priority 150
+standby 5 preempt
+no shutdown 
+exit
+interface vlan 60
+description IT DEPARTMENT
+ip address 192.168.6.2 255.255.255.0
+standby 6 ip 192.168.6.1
+standby 6 priority 150
+standby 6 preempt
+no shutdown 
+exit
+interface vlan 70
+description GRAPHIC DESIGNING DEPARTMENT
+ip address 192.168.7.2 255.255.255.0
+standby 7 ip 192.168.7.1
+standby 7 priority 150
+standby 7 preempt
+no shutdown 
+exit
+interface vlan 80
+description ADVERTISING DEPARTMENT
+ip address 192.168.8.2 255.255.255.0
+standby 8 ip 192.168.8.1
+standby 8 priority 150
+standby 8 preempt
+no shutdown 
+exit
+interface vlan 90
+description WIRELESS USERS
+ip address 192.168.9.2 255.255.255.0
+standby 9 ip 192.168.9.1
+standby 9 priority 150
+standby 9 preempt
+no shutdown 
+exit
+interface vlan 150
+description DATA CENTER
+ip address 192.168.15.2 255.255.255.0
+standby 15 ip 192.168.15.1
+standby 15 priority 150
+standby 15 preempt
+no shutdown 
+exit

@@ -1,0 +1,16 @@
+#Uploaded by Sudeera Seneviratne#
+
+interface range fastEthernet 0/1-2
+switchport mode trunk
+switchport trunk allowed vlan add 10
+switchport trunk allowed vlan add 20
+channel-group 1 mode desirable
+no shutdown
+exit
+interface range fastEthernet 0/3-4
+switchport mode trunk
+switchport trunk allowed vlan add 10
+switchport trunk allowed vlan add 20
+channel-group 4 mode desirable
+no shutdown
+exit

@@ -1,0 +1,44 @@
+#Uploaded by Sudeera Seneviratne#
+
+interface range gigabitEthernet 1/0/9-10
+switchport mode trunk
+switchport trunk allowed vlan add 10
+switchport trunk allowed vlan add 20
+switchport trunk allowed vlan add 30
+switchport trunk allowed vlan add 40
+switchport trunk allowed vlan add 50
+channel-group 40 mode auto
+no shutdown 
+exit
+interface range gigabitEthernet 1/0/11-12
+switchport mode trunk
+switchport trunk allowed vlan add 60
+switchport trunk allowed vlan add 70
+switchport trunk allowed vlan add 80
+switchport trunk allowed vlan add 150
+channel-group 41 mode auto
+no shutdown 
+exit
+interface range gigabitEthernet 1/0/1-2
+switchport mode trunk
+switchport trunk allowed vlan add 10
+switchport trunk allowed vlan add 20
+channel-group 1 mode auto
+no shutdown
+exit
+interface range gigabitEthernet 1/0/3-4
+switchport mode trunk
+switchport trunk allowed vlan add 30
+switchport trunk allowed vlan add 40
+switchport trunk allowed vlan add 50
+channel-group 2 mode auto
+no shutdown
+exit
+interface range gigabitEthernet 1/0/5-6
+switchport mode trunk
+switchport trunk allowed vlan add 60
+switchport trunk allowed vlan add 70
+switchport trunk allowed vlan add 80
+channel-group 3 mode auto
+no shutdown
+exit

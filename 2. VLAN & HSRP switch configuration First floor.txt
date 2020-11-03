@@ -1,0 +1,55 @@
+#Uploaded by Sudeera Seneviratne#
+
+vtp mode client 
+vtp domain mediamora
+vtp password class
+interface vlan 10
+description RECEPTION
+ip address 192.168.1.5 255.255.255.0
+no shutdown
+exit
+interface vlan 20
+description ADMINISTRATION DEPARTMENT
+ip address 192.168.2.5 255.255.255.0
+no shutdown 
+exit
+interface vlan 30
+description HUMAN RESOURCE MANAGMENT
+ip address 192.168.3.5 255.255.255.0
+no shutdown 
+exit
+interface vlan 40
+description LEGAL DEPARTMENT
+ip address 192.168.4.5 255.255.255.0
+no shutdown 
+exit
+interface vlan 50
+description FINANCE AND MANAGMENT DEPARTMENT
+ip address 192.168.5.5 255.255.255.0
+no shutdown 
+exit
+interface vlan 60
+description IT DEPARTMENT
+ip address 192.168.6.5 255.255.255.0
+no shutdown 
+exit
+interface vlan 70
+description GRAPHIC DESIGNING DEPARTMENT
+ip address 192.168.7.5 255.255.255.0
+no shutdown 
+exit
+interface vlan 80
+description ADVERTISING DEPARTMENT
+ip address 192.168.8.5 255.255.255.0
+no shutdown 
+exit
+interface vlan 90
+description WIRELESS USERS
+ip address 192.168.9.5 255.255.255.0
+no shutdown 
+exit
+interface vlan 150
+description DATA CENTER
+ip address 192.168.15.5 255.255.255.0
+no shutdown 
+exit

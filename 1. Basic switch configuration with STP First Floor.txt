@@ -1,0 +1,41 @@
+#Uploaded by Sudeera Seneviratne#
+
+hostname FIRSTFLOORSWITCH
+banner motd #A U T H O R I Z E D  A D M I N I S T R A T O R S  O N L Y#
+line console 0
+password class
+logging synchronous
+login local
+exit
+line vty 0 15
+transport input ssh
+login local
+password class
+login 
+exit
+enable secret class
+service password-encryption 
+interface vlan 1
+ip address 192.168.31.4 255.255.255.0
+no shutdown
+exit
+interface range fastEthernet 0/1-24
+shutdown 
+exit
+interface range gigabitEthernet 0/1-2
+shutdown 
+exit
+service timestamps log datetime msec
+ip default-gateway 192.168.31.1
+ip domain-name mediamora.lk
+crypto key generate rsa modulus 1024
+ip ssh version 2
+username admin secret class
+interface range fastEthernet 0/5-20
+switchport mode access
+switchport port-security
+switchport port-security maximum 1
+switchport port-security mac address sticky
+switchport port security violation shutdown
+no shutdown
+exit

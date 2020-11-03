@@ -1,0 +1,42 @@
+#Uploaded by Sudeera Seneviratne#
+
+hostname SLAVE
+banner login #A U T H O R I Z E D  A D M I N I S T R A T O R S  O N L Y#
+line console 0
+password class
+login 
+exit
+line aux 0
+password class
+login
+exit
+line vty 0 15
+password class
+login 
+exit
+enable secret class
+service password-encryption 
+interface vlan 1
+ip address 192.168.31.2 255.255.255.0
+no shutdown
+exit
+service timestamps log datetime msec
+interface gigabitEthernet 1/0/7
+switchport
+switchport mode access
+switchport access vlan 90
+no shut 
+exit
+logging console
+logging buffered
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10 root primary
+spanning-tree vlan 20 root primary
+spanning-tree vlan 30 root primary
+spanning-tree vlan 40 root primary
+spanning-tree vlan 50 root primary
+spanning-tree vlan 60 root secondary
+spanning-tree vlan 70 root secondary
+spanning-tree vlan 80 root secondary
+spanning-tree vlan 90 root secondary
+spanning-tree vlan 150 root secondary

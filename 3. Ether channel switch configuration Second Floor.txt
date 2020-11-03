@@ -1,0 +1,18 @@
+#Uploaded by Sudeera Seneviratne#
+
+interface range gigabitEthernet 0/1-2
+switchport mode trunk
+switchport trunk allowed vlan add 60
+switchport trunk allowed vlan add 70
+switchport trunk allowed vlan add 80
+channel-group 3 mode desirable
+no shutdown
+exit
+interface range gigabitEthernet 0/3-4
+switchport mode trunk
+switchport trunk allowed vlan add 60
+switchport trunk allowed vlan add 70
+switchport trunk allowed vlan add 80
+channel-group 6 mode desirable
+no shutdown
+exit
